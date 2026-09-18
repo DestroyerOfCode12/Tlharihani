@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4 lg:col-span-1">
             <Logo className="h-11 w-auto" />
-            <p className="label-caps text-grey-500">{siteConfig.tagline}</p>
+            <p className="label-caps text-grey-400">{siteConfig.tagline}</p>
             <p className="max-w-xs text-sm">
               Concierge on the go. Phones sold, devices and cars rented, delivered wherever you are
               in South Africa.
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-hairline text-grey-500 mt-16 flex flex-col gap-3 border-t pt-8 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <div className="border-hairline text-grey-400 mt-16 flex flex-col gap-3 border-t pt-8 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.businessName}. Registered business. Est.{' '}
             {siteConfig.founded}.

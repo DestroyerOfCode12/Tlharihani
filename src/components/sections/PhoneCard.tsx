@@ -46,7 +46,7 @@ export function PhoneCard({ phone }: { phone: Phone }) {
         <div className="flex items-baseline gap-2 pt-1">
           <span className="text-paper text-lg font-semibold">{formatCurrency(phone.price)}</span>
           {phone.compareAtPrice ? (
-            <span className="text-grey-500 text-sm line-through">
+            <span className="text-grey-400 text-sm line-through">
               {formatCurrency(phone.compareAtPrice)}
             </span>
           ) : null}

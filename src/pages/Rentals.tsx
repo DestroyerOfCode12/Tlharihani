@@ -7,28 +7,25 @@ import { rentals } from '../data/rentals'
 import type { RentalCategory } from '../schemas/catalog'
 
 const categories: { value: RentalCategory; label: string }[] = [
-  { value: 'phone', label: 'Phones' },
   { value: 'device', label: 'Devices' },
   { value: 'car', label: 'Cars' },
 ]
 
 export default function Rentals() {
-  const [active, setActive] = useState<RentalCategory>('phone')
+  const [active, setActive] = useState<RentalCategory>('device')
   const filtered = useMemo(() => rentals.filter((rental) => rental.category === active), [active])
 
   return (
     <>
       <Seo
-        title="Rentals — Phones, Devices & Cars"
-        description="Rent phones, devices and cars on daily, weekly, monthly or long term terms. Clear pricing, deposits and live availability, delivered wherever you are."
+        title="Rentals — Devices & Cars"
+        description="Rent devices and cars on daily, weekly, monthly or long term terms. Clear pricing, deposits and live availability, delivered wherever you are."
         path="/rentals"
       />
 
       <Section tone="ink" className="pt-14 pb-6 sm:pt-20">
         <p className="label-caps text-accent">Rentals</p>
-        <h1 className="font-display mt-3 text-4xl sm:text-5xl">
-          Phones, devices & cars — on your terms
-        </h1>
+        <h1 className="font-display mt-3 text-4xl sm:text-5xl">Devices & cars — on your terms</h1>
         <p className="text-grey-300 mt-4 max-w-xl text-sm">
           Daily, weekly, monthly or long term. Every listing shows the deposit and live availability
           before you book — delivered and collected wherever suits you.

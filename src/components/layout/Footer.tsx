@@ -19,8 +19,8 @@ export function Footer() {
             <Logo className="h-11 w-auto" />
             <p className="label-caps text-grey-500">{siteConfig.tagline}</p>
             <p className="max-w-xs text-sm">
-              Concierge on the go — phones, devices and cars sold and rented, delivered wherever you
-              are in South Africa.
+              Concierge on the go — phones sold, devices and cars rented, delivered wherever you are
+              in South Africa.
             </p>
           </div>
 

@@ -5,7 +5,6 @@ import { formatCurrency, formatDate } from '../../lib/format'
 import { lowestRentalPrice } from '../../lib/catalog'
 
 const aspectByCategory: Record<Rental['category'], string> = {
-  phone: 'aspect-[3/4]',
   device: 'aspect-[4/3]',
   car: 'aspect-[16/9]',
 }

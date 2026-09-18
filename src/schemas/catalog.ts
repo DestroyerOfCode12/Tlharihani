@@ -50,7 +50,7 @@ export const accessorySchema = z.object({
 })
 export type Accessory = z.infer<typeof accessorySchema>
 
-export const rentalCategorySchema = z.enum(['phone', 'device', 'car'])
+export const rentalCategorySchema = z.enum(['device', 'car'])
 export type RentalCategory = z.infer<typeof rentalCategorySchema>
 
 export const availabilityStatusSchema = z.enum(['available', 'booked', 'available-from'])
@@ -92,7 +92,7 @@ export const testimonialSchema = z.object({
   name: z.string().min(1),
   location: z.string().min(1),
   quote: z.string().min(1),
-  service: z.enum(['shop', 'rental-phone', 'rental-device', 'rental-car', 'concierge']),
+  service: z.enum(['shop', 'rental-device', 'rental-car', 'concierge']),
   rating: z.number().min(1).max(5),
 })
 export type Testimonial = z.infer<typeof testimonialSchema>

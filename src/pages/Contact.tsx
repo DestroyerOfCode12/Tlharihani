@@ -103,9 +103,7 @@ export default function Contact() {
               <Select id="subject" {...register('subject')}>
                 <option value="General enquiry">General enquiry</option>
                 <option value="Buying a phone">Buying a phone</option>
-                <option value="Renting a phone, device or car">
-                  Renting a phone, device or car
-                </option>
+                <option value="Renting a device or car">Renting a device or car</option>
                 <option value="Book an appointment">Book an appointment at the hub</option>
                 <option value="Something else">Something else</option>
               </Select>

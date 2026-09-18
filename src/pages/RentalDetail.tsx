@@ -62,7 +62,7 @@ export default function RentalDetail() {
     defaultValues: {
       itemName: rental?.name ?? '',
       itemSlug: rental?.slug ?? '',
-      itemCategory: rental?.category ?? 'phone',
+      itemCategory: rental?.category ?? 'device',
       period: availablePeriods.length ? periodKeyToFormValue[availablePeriods[0][0]] : 'daily',
       deliveryMethod: 'delivery',
       website: '',

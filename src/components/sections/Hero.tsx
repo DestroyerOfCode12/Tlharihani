@@ -40,8 +40,8 @@ export function Hero() {
             We bring the phone, the device, or the car to you.
           </h1>
           <p className="text-grey-200 mx-auto max-w-xl text-base text-balance sm:text-lg">
-            Gadgets & Travels has sold and rented phones, devices and cars across South Africa since
-            2010 — delivered to your door, wherever you are, with a concierge who handles the
+            Gadgets & Travels has sold phones and rented out devices and cars across South Africa
+            since 2010 — delivered to your door, wherever you are, with a concierge who handles the
             details.
           </p>
         </motion.div>

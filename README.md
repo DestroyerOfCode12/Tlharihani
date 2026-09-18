@@ -1,7 +1,7 @@
 # Gadgets & Travels — Website
 
-Production-ready Phase 1 site for **Gadgets & Travels**: phone sales, and phone/device/car
-rentals, built around a "concierge on the go" service. Sandton, South Africa. Est. 2010.
+Production-ready Phase 1 site for **Gadgets & Travels**: phone sales, and device/car rentals,
+built around a "concierge on the go" service. Sandton, South Africa. Est. 2010.
 
 Stack: React 19 + Vite + TypeScript (strict) + Tailwind CSS v4 + React Router + Framer Motion +
 React Hook Form + Zod, deployed on Netlify with Netlify Functions for form handling and email.
@@ -69,8 +69,9 @@ it on the homepage, set `isFeatured: true`; for the "Special" badge, set `isSpec
 **Add an accessory:** same idea, in the `rawAccessories` array of `src/data/phones.ts`.
 
 **Add a rental:** open `src/data/rentals.ts`, copy an object in `rawRentals`, set `category` to
-`phone`, `device` or `car`, and fill in `pricing` (any combination of `daily`/`weekly`/`monthly`/
-`longTerm` — only the ones you set will show), `deposit`, and `images`.
+`device` or `car` (phones are sold, not rented, in Phase 1 — see below), and fill in `pricing`
+(any combination of `daily`/`weekly`/`monthly`/`longTerm` — only the ones you set will show),
+`deposit`, and `images`.
 
 **Add a testimonial:** `src/data/testimonials.ts`. **Add an FAQ:** `src/data/faqs.ts` — mark
 anything not yet confirmed with `needsConfirmation: true` and prefix the answer with `[CONFIRM]`.

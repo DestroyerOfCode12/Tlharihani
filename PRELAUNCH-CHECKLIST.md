@@ -9,7 +9,7 @@ Work through this before pointing the client's domain at the live site.
 - [ ] Replace every `[CONFIRM]` in `src/data/faqs.ts` and `src/data/rentals.ts` once the client
       has verified those answers.
 - [ ] Swap all placeholder SVG images in `public/images/` for real product/hub photography, in the
-      same aspect ratios (phones/rentals 3:4, accessories 1:1, cars 16:9, devices 4:3).
+      same aspect ratios (phones 3:4, accessories 1:1, rental cars 16:9, rental devices 4:3).
 - [ ] Replace the placeholder Terms & Conditions (`src/pages/Terms.tsx`) and Returns, Refunds &
       Warranty Policy (`src/pages/ReturnsWarranty.tsx`) with the client's actual legal documents.
 - [ ] Fill in the Information Officer's name and contact details in

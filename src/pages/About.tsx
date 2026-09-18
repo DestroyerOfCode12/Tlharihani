@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Seo
         title="About Us"
-        description="Gadgets & Travels has sold and rented phones, devices and cars across South Africa since 2010 — built on a concierge-on-the-go philosophy."
+        description="Gadgets & Travels has sold phones and rented devices and cars across South Africa since 2010 — built on a concierge-on-the-go philosophy."
         path="/about"
       />
 
@@ -22,15 +22,15 @@ export default function About() {
             </h1>
             <div className="text-grey-200 mt-6 space-y-4 text-sm leading-relaxed">
               <p>
-                Gadgets & Travels started with a simple idea: buying or renting a phone, device or
+                Gadgets & Travels started with a simple idea: buying a phone or renting a device or
                 car shouldn&apos;t mean queuing at a counter, waiting on hold, or hoping the fine
                 print is fair. Since 2010, we&apos;ve built our business around one principle — come
                 to the customer, not the other way around.
               </p>
               <p>{siteConfig.descriptionShort}</p>
               <p>
-                Today we sell new, used and refurbished phones and accessories, and rent out phones,
-                devices and cars on daily, weekly, monthly and long term terms — always with honest
+                Today we sell new, used and refurbished phones and accessories, and rent out devices
+                and cars on daily, weekly, monthly and long term terms — always with honest
                 condition grading, clear pricing, and a real person you can reach on WhatsApp.
               </p>
             </div>

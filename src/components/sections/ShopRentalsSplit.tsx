@@ -46,7 +46,7 @@ export function ShopRentalsSplit() {
           <div className="from-ink via-ink/30 absolute inset-0 bg-gradient-to-t to-transparent" />
           <div className="relative z-10 flex flex-col gap-4">
             <p className="label-caps text-accent">Borrow it</p>
-            <h3 className="font-display text-3xl sm:text-4xl">Rent phones, devices & cars</h3>
+            <h3 className="font-display text-3xl sm:text-4xl">Rent devices & cars</h3>
             <p className="text-grey-200 max-w-sm text-sm">
               Daily, weekly, monthly or long term — delivered and collected wherever you need them,
               with clear pricing and deposits.

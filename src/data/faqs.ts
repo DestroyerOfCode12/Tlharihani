@@ -4,7 +4,7 @@ const rawFaqs: Faq[] = [
   {
     id: 'faq-how-rentals-work',
     category: 'rentals',
-    question: 'How does renting a phone, device or car actually work?',
+    question: 'How does renting a device or car actually work?',
     answer:
       'Browse the Rentals page, choose your item and dates, and submit a booking request. We confirm availability within one business day, then deliver the item to you (or have it ready for collection at the hub) at the agreed time. Everything is inspected and reset before it reaches you, and collected the same way at the end of your rental.',
     needsConfirmation: false,

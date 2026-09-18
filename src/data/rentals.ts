@@ -2,49 +2,6 @@ import { rentalSchema, type Rental } from '../schemas/catalog'
 
 const rawRentals: Rental[] = [
   {
-    id: 'rental-iphone-15',
-    slug: 'iphone-15-rental',
-    name: 'iPhone 15',
-    category: 'phone',
-    summary: 'A brand-new iPhone for the length of your trip or project, delivered to your door.',
-    description:
-      'Ideal for travellers who want to keep a local number active on a second device, or anyone whose own phone is in for repair. Comes pre-configured and ready to use, with a charger and cable included.',
-    pricing: { daily: 249, weekly: 1399, monthly: 3999 },
-    deposit: 5000,
-    features: [
-      'eSIM ready',
-      'Charger + cable included',
-      'Delivered and collected by us',
-      'Full insurance available on request',
-    ],
-    specifications: { Storage: '128GB', Colour: 'Black', Condition: 'Excellent — rental grade' },
-    availability: { status: 'available' },
-    isSpecial: false,
-    isFeatured: true,
-    images: ['/images/rentals/iphone-15-rental-1.svg'],
-  },
-  {
-    id: 'rental-galaxy-s24',
-    slug: 'galaxy-s24-rental',
-    name: 'Samsung Galaxy S24',
-    category: 'phone',
-    summary: 'Flagship Android power on a daily, weekly or monthly rental.',
-    description:
-      'A sharp choice for business trips — brilliant camera for content, a big bright screen for presentations, and fast 5G wherever you land.',
-    pricing: { daily: 229, weekly: 1299, monthly: 3699 },
-    deposit: 4500,
-    features: ['5G ready', 'Charger + cable included', 'Delivered and collected by us'],
-    specifications: {
-      Storage: '256GB',
-      Colour: 'Titanium Grey',
-      Condition: 'Excellent — rental grade',
-    },
-    availability: { status: 'booked', availableFrom: '2026-10-02' },
-    isSpecial: false,
-    isFeatured: true,
-    images: ['/images/rentals/galaxy-s24-rental-1.svg'],
-  },
-  {
     id: 'rental-gopro-hero',
     slug: 'gopro-hero-rental',
     name: 'GoPro Hero Action Camera',

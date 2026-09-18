@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Seo
         title="Concierge On The Go"
-        description="Gadgets & Travels sells and rents phones, devices and cars across South Africa — delivered to you. Sandton hub, appointment only, trusted since 2010."
+        description="Gadgets & Travels sells phones and rents devices and cars across South Africa — delivered to you. Sandton hub, appointment only, trusted since 2010."
         path="/"
         jsonLd={localBusinessJsonLd(window.location.origin)}
       />

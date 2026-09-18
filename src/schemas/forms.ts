@@ -40,7 +40,7 @@ export const deliveryMethodSchema = z.enum(['delivery', 'collection'])
 export const bookingFormSchema = z.object({
   itemName: z.string().trim().min(1),
   itemSlug: z.string().trim().min(1),
-  itemCategory: z.enum(['phone', 'device', 'car']),
+  itemCategory: z.enum(['device', 'car']),
   period: z.enum(['daily', 'weekly', 'monthly', 'long-term']),
   startDate: z.string().trim().min(1, 'Please choose a start date.'),
   endDate: z.string().trim().min(1, 'Please choose an end date.'),

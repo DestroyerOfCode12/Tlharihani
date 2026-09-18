@@ -7,14 +7,20 @@ const items = [
   { label: 'Appointment-only hub', detail: '77 Stella Street, Sandton' },
 ]
 
+// The one light section on the site. Everything else sits on black, so this
+// band (right before the closing CTA) is the visual breather that keeps the
+// long scroll from reading as one undifferentiated dark wall.
 export function TrustStrip() {
   return (
-    <section aria-label="Why customers trust us" className="border-hairline bg-surface border-y">
-      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+    <section aria-label="Why customers trust us" className="bg-paper text-ink">
+      <div className="divide-paper-hairline mx-auto grid max-w-7xl divide-y sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
         {items.map((item) => (
-          <div key={item.label} className="flex flex-col gap-1 text-center sm:text-left">
-            <span className="label-caps text-accent">{item.label}</span>
-            <span className="text-grey-300 text-sm">{item.detail}</span>
+          <div
+            key={item.label}
+            className="flex flex-col gap-1 px-5 py-10 text-center sm:px-8 sm:text-left"
+          >
+            <span className="label-caps text-accent-deep">{item.label}</span>
+            <span className="text-ink/60 text-sm">{item.detail}</span>
           </div>
         ))}
       </div>

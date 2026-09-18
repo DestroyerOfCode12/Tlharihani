@@ -32,7 +32,7 @@ export function AccessoryCard({ accessory }: { accessory: Accessory }) {
             {formatCurrency(accessory.price)}
           </span>
           {accessory.compareAtPrice ? (
-            <span className="text-grey-500 text-sm line-through">
+            <span className="text-grey-400 text-sm line-through">
               {formatCurrency(accessory.compareAtPrice)}
             </span>
           ) : null}

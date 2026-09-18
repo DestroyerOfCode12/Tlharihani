@@ -18,9 +18,9 @@
 @theme {
   /* Colour */
   --color-ink: #0a0a0a; /* true black */
-  --color-ink-soft: #141414;
-  --color-surface: #1c1c1a;
-  --color-surface-raised: #242422;
+  --color-ink-soft: #191917;
+  --color-surface: #242320; /* widened from #1c1c1a so sections actually separate at a glance */
+  --color-surface-raised: #2e2c27;
   --color-hairline: rgba(245, 245, 240, 0.14);
   --color-hairline-strong: rgba(245, 245, 240, 0.28);
 
@@ -32,11 +32,12 @@
   --color-grey-200: #d9d8d1;
   --color-grey-300: #b7b6ac;
   --color-grey-400: #8f8e84;
-  --color-grey-500: #6b6a62;
+  --color-grey-500: #6b6a62; /* decorative/borders only, fails AA text contrast below 18px */
   --color-grey-600: #4a4943;
 
-  --color-accent: #c9b99a; /* champagne — focus/success only */
+  --color-accent: #c9b99a; /* champagne, on dark backgrounds only */
   --color-accent-soft: #e3d9c4;
+  --color-accent-deep: #796f5c; /* same hue, darkened for 4.5:1 on paper */
   --color-success: #c9b99a;
   --color-error: #e0745a;
 
@@ -100,7 +101,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 600; /* was 500, too light to carry hierarchy at hero/h1 sizes on near-black */
     letter-spacing: -0.01em;
   }
 

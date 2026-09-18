@@ -122,7 +122,7 @@ export default function PhoneDetail() {
             <div className="flex items-baseline gap-3">
               <span className="text-3xl font-semibold">{formatCurrency(phone.price)}</span>
               {phone.compareAtPrice ? (
-                <span className="text-grey-500 text-lg line-through">
+                <span className="text-grey-400 text-lg line-through">
                   {formatCurrency(phone.compareAtPrice)}
                 </span>
               ) : null}

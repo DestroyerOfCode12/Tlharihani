@@ -19,7 +19,7 @@ export function Footer() {
             <Logo className="h-11 w-auto" />
             <p className="label-caps text-grey-500">{siteConfig.tagline}</p>
             <p className="max-w-xs text-sm">
-              Concierge on the go — phones sold, devices and cars rented, delivered wherever you are
+              Concierge on the go. Phones sold, devices and cars rented, delivered wherever you are
               in South Africa.
             </p>
           </div>
@@ -71,7 +71,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.businessName}. Registered business. Est.{' '}
             {siteConfig.founded}.
           </p>
-          <p>Sandton, South Africa — serving every major city.</p>
+          <p>Sandton, South Africa. Serving every major city.</p>
         </div>
       </div>
     </footer>

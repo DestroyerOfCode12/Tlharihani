@@ -33,10 +33,6 @@ export const siteConfig = {
 
   mapEmbedSrc: 'https://www.google.com/maps?q=77+Stella+Street,+Sandton,+South+Africa&output=embed',
 
-  hours: {
-    note: 'By appointment only — book a time that suits you and we will confirm within one business day.',
-  },
-
   social: {
     instagram: '[TO BE SUPPLIED: Instagram handle/URL]',
     facebook: '[TO BE SUPPLIED: Facebook URL]',
@@ -49,9 +45,6 @@ export const siteConfig = {
   registeredBusiness: true,
 
   paymentMethods: ['Yoco (card)', 'EFT', 'Cash on collection'] as const,
-
-  serviceCities:
-    'Johannesburg, Pretoria, Sandton, Cape Town, Durban and beyond — the concierge comes to you.',
 } as const
 
 export const analyticsConfig = {

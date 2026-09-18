@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { Section } from '../components/ui/Section'
@@ -12,7 +12,6 @@ import { AccessoryCard } from '../components/sections/AccessoryCard'
 import { phones, accessories } from '../data/phones'
 import { uniqueBrands, sortItems, type SortOption } from '../lib/catalog'
 import type { Condition } from '../schemas/catalog'
-import { useEffectAfterMount } from '../hooks/useEffectAfterMount'
 
 type ShopTab = 'phones' | 'accessories'
 
@@ -25,8 +24,8 @@ const conditionOptions: { value: Condition; label: string }[] = [
 const priceBins = [
   { value: 'any', label: 'Any price' },
   { value: '0-8000', label: 'Under R8,000' },
-  { value: '8000-15000', label: 'R8,000 – R15,000' },
-  { value: '15000-25000', label: 'R15,000 – R25,000' },
+  { value: '8000-15000', label: 'R8,000 to R15,000' },
+  { value: '15000-25000', label: 'R15,000 to R25,000' },
   { value: '25000-999999', label: 'R25,000+' },
 ]
 
@@ -40,9 +39,15 @@ export default function Shop() {
   const [priceBin, setPriceBin] = useState('any')
   const [sort, setSort] = useState<SortOption>('featured')
 
-  useEffectAfterMount(() => {
+  const mountedRef = useRef(false)
+  useEffect(() => {
+    // Skip the first run so we don't rewrite the URL on initial load, only on tab changes.
+    if (!mountedRef.current) {
+      mountedRef.current = true
+      return
+    }
     setSearchParams(tab === 'phones' ? {} : { tab }, { replace: true })
-  }, [tab])
+  }, [tab, setSearchParams])
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 350)
@@ -91,7 +96,7 @@ export default function Shop() {
     <>
       <Seo
         title="Shop Phones & Accessories"
-        description="New, used and refurbished phones, plus accessories, all with clear pricing, condition and warranty details. Enquire to buy — no card checkout required."
+        description="New, used and refurbished phones, plus accessories, with clear pricing, condition and warranty details. Enquire to buy, no card checkout required."
         path="/shop"
       />
 
@@ -222,7 +227,7 @@ export default function Shop() {
             ) : filtered.length === 0 ? (
               <EmptyState
                 title="No matches yet"
-                description="Try widening your filters, or message us — we may have exactly what you're after in stock but not yet listed."
+                description="Try widening your filters, or message us. We may have what you're after in stock but not yet listed."
               />
             ) : (
               <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">

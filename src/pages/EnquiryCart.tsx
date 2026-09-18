@@ -101,7 +101,7 @@ export default function EnquiryCart() {
         <Section tone="ink" className="pt-14 sm:pt-20">
           <EmptyState
             title="Your enquiry cart is empty"
-            description="Browse the shop and add a phone or accessory to start an enquiry — no payment required yet."
+            description="Browse the shop and add a phone or accessory to start an enquiry. No payment required yet."
             action={<ButtonLink to="/shop">Browse the shop</ButtonLink>}
           />
         </Section>
@@ -188,7 +188,7 @@ export default function EnquiryCart() {
               ) : null}
               {appliedDiscount ? (
                 <p className="text-accent mt-2 text-xs">
-                  {appliedDiscount.code} applied — {appliedDiscount.percentOff}% off.
+                  {appliedDiscount.code} applied: {appliedDiscount.percentOff}% off.
                 </p>
               ) : null}
             </div>
@@ -211,7 +211,7 @@ export default function EnquiryCart() {
             </dl>
             <p className="text-grey-400 text-xs">
               Final pricing is confirmed once we&apos;ve checked stock. Payment is by Yoco, EFT or
-              cash on collection — never online card checkout at this stage.
+              cash on collection. There's no online card checkout at this stage.
             </p>
           </div>
 

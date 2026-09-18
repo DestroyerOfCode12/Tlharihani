@@ -22,7 +22,7 @@ const rawFaqs: Faq[] = [
     category: 'documents',
     question: 'What documents do I need to rent something?',
     answer:
-      'We will ask for a copy of your ID and proof of residence once your booking is confirmed. For your security, we do not collect these through the website — our team will request them securely by email or WhatsApp after confirmation.',
+      "A copy of your ID and proof of residence. We don't collect these through the website. Once your booking is confirmed, the team requests them securely by email or WhatsApp.",
     needsConfirmation: false,
   },
   {
@@ -62,7 +62,7 @@ const rawFaqs: Faq[] = [
     category: 'payment',
     question: 'What payment methods do you accept?',
     answer:
-      'Card payments via Yoco, EFT, and cash on collection at our Sandton hub. We will confirm payment details with you once your order or booking is finalised — there is no online card checkout yet.',
+      'Yoco card payments, EFT, or cash on collection at our Sandton hub. We confirm payment details once your order or booking is finalised. There is no online card checkout yet.',
     needsConfirmation: false,
   },
   {
@@ -70,7 +70,7 @@ const rawFaqs: Faq[] = [
     category: 'appointments',
     question: 'How do appointments at the Sandton hub work?',
     answer:
-      'Our hub is appointment-only, so every visitor gets our full attention. Request a time through the Contact page or WhatsApp, and we will confirm a slot that works for you — usually within one business day.',
+      'Request a time through the Contact page or WhatsApp and we will confirm a slot, usually within one business day. The hub is appointment-only so every visitor gets our full attention.',
     needsConfirmation: false,
   },
   {

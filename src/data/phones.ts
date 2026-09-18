@@ -99,7 +99,7 @@ const rawPhones: Phone[] = [
     isFeatured: false,
     images: ['/images/phones/galaxy-a55-1.svg'],
     description:
-      'A brilliant mid-range companion — capable cameras, a bright AMOLED screen and a metal frame that feels far pricier than it is.',
+      'A solid mid-range phone. Capable cameras, a bright AMOLED screen, and a metal frame that feels pricier than it is.',
     specs: {
       Display: '6.6" Super AMOLED',
       Chip: 'Exynos 1480',
@@ -126,7 +126,7 @@ const rawPhones: Phone[] = [
     isFeatured: true,
     images: ['/images/phones/pixel-8-1.svg'],
     description:
-      "Gently used, thoroughly inspected. Google's computational photography in a compact, one-hand-friendly body — great for a traveller who wants effortless photos.",
+      "Gently used, thoroughly inspected. Compact, one-hand-friendly, and Google's computational photography does the heavy lifting for anyone who wants effortless photos.",
     specs: {
       Display: '6.2" OLED, 120Hz',
       Chip: 'Google Tensor G3',
@@ -209,7 +209,7 @@ const rawAccessories: Accessory[] = [
     isFeatured: true,
     images: ['/images/accessories/powerbank-1.svg'],
     description:
-      'Two full charges in your carry-on — the one accessory every traveller regrets not packing.',
+      'Two full charges in your carry-on. The one accessory every traveller regrets not packing.',
     specs: { Capacity: '20,000mAh', Ports: '2x USB-C, 1x USB-A' },
   },
   {

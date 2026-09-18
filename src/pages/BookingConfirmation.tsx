@@ -66,7 +66,7 @@ export default function BookingConfirmation() {
         </span>
         <h1 className="font-display mt-6 text-4xl">Booking request received</h1>
         <p className="text-grey-300 mt-4 max-w-md text-sm">
-          Thank you — we&apos;ve received your request for the{' '}
+          Thanks, we&apos;ve received your request for the{' '}
           <strong className="text-paper">{rental.name}</strong>. We&apos;ll confirm availability and
           next steps within one business day. Your reference number is:
         </p>

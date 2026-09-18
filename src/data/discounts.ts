@@ -3,7 +3,7 @@ import { discountCodeSchema, type DiscountCode } from '../schemas/catalog'
 const rawDiscounts: DiscountCode[] = [
   {
     code: 'WELCOME10',
-    label: 'Welcome — 10% off your first enquiry',
+    label: 'Welcome: 10% off your first enquiry',
     percentOff: 10,
     active: true,
   },

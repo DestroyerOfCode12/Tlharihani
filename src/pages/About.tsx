@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Seo
         title="About Us"
-        description="Gadgets & Travels has sold phones and rented devices and cars across South Africa since 2010 — built on a concierge-on-the-go philosophy."
+        description="Gadgets & Travels has sold phones and rented devices and cars across South Africa since 2010, built on a concierge-on-the-go philosophy."
         path="/about"
       />
 
@@ -22,16 +22,19 @@ export default function About() {
             </h1>
             <div className="text-grey-200 mt-6 space-y-4 text-sm leading-relaxed">
               <p>
-                Gadgets & Travels started with a simple idea: buying a phone or renting a device or
+                Gadgets & Travels started with a simple idea. Buying a phone or renting a device or
                 car shouldn&apos;t mean queuing at a counter, waiting on hold, or hoping the fine
-                print is fair. Since 2010, we&apos;ve built our business around one principle — come
-                to the customer, not the other way around.
+                print is fair.
               </p>
-              <p>{siteConfig.descriptionShort}</p>
               <p>
-                Today we sell new, used and refurbished phones and accessories, and rent out devices
-                and cars on daily, weekly, monthly and long term terms — always with honest
-                condition grading, clear pricing, and a real person you can reach on WhatsApp.
+                Since 2010 we&apos;ve built the business around one principle: come to the customer,
+                not the other way around. {siteConfig.descriptionShort}
+              </p>
+              <p>
+                We sell new, used and refurbished phones and accessories, and we rent out devices
+                and cars on daily, weekly, monthly and long term terms. Condition is graded
+                honestly, pricing is shown upfront, and there is a real person on WhatsApp if you
+                need one.
               </p>
             </div>
           </Reveal>
@@ -52,13 +55,13 @@ export default function About() {
         <Reveal className="max-w-2xl">
           <p className="label-caps text-accent">The concierge philosophy</p>
           <h2 className="font-display mt-3 text-3xl sm:text-4xl">
-            We come to you — that&apos;s the whole idea
+            We come to you. That&apos;s the whole idea.
           </h2>
           <p className="text-grey-200 mt-4 text-sm leading-relaxed">
-            &ldquo;Concierge on the go&rdquo; isn&apos;t a tagline — it&apos;s how every order and
-            booking is handled. Your phone, device or car is inspected, charged and delivered to
-            your address, wherever you are in South Africa. When your rental ends, we collect it the
-            same way. No dealership visit required unless you want one.
+            &ldquo;Concierge on the go&rdquo; isn&apos;t a tagline. It&apos;s how every order and
+            booking gets handled. Your phone, device or car arrives inspected, charged and delivered
+            to your address, wherever you are in South Africa. When a rental ends, we collect it the
+            same way. No dealership visit required, unless you want one.
           </p>
         </Reveal>
       </Section>
@@ -68,17 +71,16 @@ export default function About() {
           <Reveal>
             <h2 className="font-display text-2xl">Who we serve</h2>
             <p className="text-grey-300 mt-3 text-sm">
-              Students needing a reliable first phone, professionals who want a spare device for
-              travel, families upgrading together, and businesses that need a car or laptop at short
-              notice. Whatever brought you here, you get the same attention to detail.
+              Students who need a reliable first phone. Professionals who want a spare device for a
+              work trip. Families upgrading together. A business that needs a car by Friday. We
+              treat the enquiry the same either way.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-display text-2xl">Our Sandton hub</h2>
             <p className="text-grey-300 mt-3 text-sm">
               Based at {siteConfig.address.line1}, {siteConfig.address.line2}. Visits are strictly
-              by appointment — this keeps every visit unhurried and gives you our full attention,
-              rather than running a walk-in showroom floor.
+              by appointment, so nobody is rushed and we're not running a walk-in showroom floor.
             </p>
             <ButtonLink to="/contact" variant="secondary" size="sm" className="mt-4 w-fit">
               Book an appointment

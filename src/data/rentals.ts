@@ -51,7 +51,7 @@ const rawRentals: Rental[] = [
     category: 'device',
     summary: 'A crisp tablet for presentations, sketching or in-flight entertainment.',
     description:
-      'Rented with an Apple Pencil and keyboard case on request — a smart, light alternative to a laptop for shorter trips.',
+      'Rented with an Apple Pencil and keyboard case on request. A light alternative to a laptop for shorter trips.',
     pricing: { daily: 199, weekly: 999, monthly: 2899 },
     deposit: 4000,
     features: [

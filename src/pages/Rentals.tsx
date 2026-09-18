@@ -18,17 +18,17 @@ export default function Rentals() {
   return (
     <>
       <Seo
-        title="Rentals — Devices & Cars"
+        title="Rentals: Devices & Cars"
         description="Rent devices and cars on daily, weekly, monthly or long term terms. Clear pricing, deposits and live availability, delivered wherever you are."
         path="/rentals"
       />
 
       <Section tone="ink" className="pt-14 pb-6 sm:pt-20">
         <p className="label-caps text-accent">Rentals</p>
-        <h1 className="font-display mt-3 text-4xl sm:text-5xl">Devices & cars — on your terms</h1>
+        <h1 className="font-display mt-3 text-4xl sm:text-5xl">Devices and cars, on your terms</h1>
         <p className="text-grey-300 mt-4 max-w-xl text-sm">
           Daily, weekly, monthly or long term. Every listing shows the deposit and live availability
-          before you book — delivered and collected wherever suits you.
+          before you book. We deliver and collect wherever suits you.
         </p>
 
         <div
@@ -58,7 +58,7 @@ export default function Rentals() {
         {filtered.length === 0 ? (
           <EmptyState
             title="Nothing listed in this category yet"
-            description="New rentals are added regularly — message us on WhatsApp and we'll let you know as soon as something suitable comes in."
+            description="New rentals get added regularly. Message us on WhatsApp and we'll let you know as soon as something suitable comes in."
           />
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

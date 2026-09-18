@@ -1,0 +1,5 @@
+# [TO BE SUPPLIED: confirm final domain and update the Sitemap line below]
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gadgetsandtravels.co.za/sitemap.xml

@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/500.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/400-italic.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+/* ---------------------------------------------------------------
+   Design tokens — Gadgets & Travels
+   Strict black/white brand palette, one restrained champagne accent.
+   --------------------------------------------------------------- */
+@theme {
+  /* Colour */
+  --color-ink: #0a0a0a; /* true black */
+  --color-ink-soft: #141414;
+  --color-surface: #1c1c1a;
+  --color-surface-raised: #242422;
+  --color-hairline: rgba(245, 245, 240, 0.14);
+  --color-hairline-strong: rgba(245, 245, 240, 0.28);
+
+  --color-paper: #f5f5f0; /* off white */
+  --color-paper-dim: #e9e8e1;
+  --color-paper-hairline: rgba(10, 10, 10, 0.12);
+
+  --color-grey-100: #efeee9;
+  --color-grey-200: #d9d8d1;
+  --color-grey-300: #b7b6ac;
+  --color-grey-400: #8f8e84;
+  --color-grey-500: #6b6a62;
+  --color-grey-600: #4a4943;
+
+  --color-accent: #c9b99a; /* champagne — focus/success only */
+  --color-accent-soft: #e3d9c4;
+  --color-success: #c9b99a;
+  --color-error: #e0745a;
+
+  /* Type */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-script: 'Cormorant Garamond', 'Playfair Display', ui-serif, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --tracking-label: 0.28em;
+
+  /* Radii */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 999px;
+
+  /* Shadow — soft, low opacity, luxury */
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.24), 0 12px 32px -12px rgba(0, 0, 0, 0.45);
+  --shadow-lift: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+
+  /* Motion */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-base: 420ms;
+  --duration-slow: 900ms;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@layer utilities {
+  .label-caps {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hairline {
+    box-shadow: inset 0 0 0 1px var(--color-hairline);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    padding: 0.75rem 1.25rem;
+  }
+
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+}

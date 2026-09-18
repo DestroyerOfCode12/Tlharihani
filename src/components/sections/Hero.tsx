@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Logo } from '../layout/Logo'
 import { ButtonLink } from '../ui/ButtonLink'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { motion as motionTokens } from '../../lib/tokens'
 
 export function Hero() {
   const prefersReducedMotion = usePrefersReducedMotion()
@@ -20,7 +21,7 @@ export function Hero() {
         <motion.div
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: prefersReducedMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.9, ease: motionTokens.ease }}
         >
           <Logo withRingAnimation className="h-24 w-auto sm:h-32" />
         </motion.div>
@@ -31,7 +32,7 @@ export function Hero() {
           transition={{
             duration: prefersReducedMotion ? 0 : 0.7,
             delay: prefersReducedMotion ? 0 : 0.3,
-            ease: [0.22, 1, 0.36, 1],
+            ease: motionTokens.ease,
           }}
           className="flex flex-col gap-5"
         >
@@ -41,7 +42,7 @@ export function Hero() {
           </h1>
           <p className="text-grey-200 mx-auto max-w-xl text-base text-balance sm:text-lg">
             Gadgets & Travels has sold phones and rented out devices and cars across South Africa
-            since 2010 — delivered to your door, wherever you are, with a concierge who handles the
+            since 2010. We deliver to your door, wherever you are, and a concierge handles the
             details.
           </p>
         </motion.div>
@@ -52,7 +53,7 @@ export function Hero() {
           transition={{
             duration: prefersReducedMotion ? 0 : 0.7,
             delay: prefersReducedMotion ? 0 : 0.5,
-            ease: [0.22, 1, 0.36, 1],
+            ease: motionTokens.ease,
           }}
           className="flex flex-col gap-4 sm:flex-row"
         >

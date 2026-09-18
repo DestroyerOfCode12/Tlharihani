@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
           <li>
             <strong>Rental bookings:</strong> name, email, phone number, delivery/collection
             preference, and rental dates. ID and proof of residence are requested separately and
-            securely once a booking is confirmed — never collected through this website.
+            securely once a booking is confirmed. They are never collected through this website.
           </li>
           <li>
             <strong>Website usage:</strong> with your consent, anonymised analytics data via Google
@@ -46,8 +46,8 @@ export default function PrivacyPolicy() {
         <h2>2. Why we collect it</h2>
         <p>
           We process your personal information to respond to enquiries, confirm and fulfil purchases
-          and rental bookings, communicate with you about your order, and — only with your consent —
-          to understand how visitors use our site so we can improve it.
+          and rental bookings, and communicate with you about your order. Only with your consent, we
+          also use it to understand how visitors use our site so we can improve it.
         </p>
 
         <h2>3. How long we keep it</h2>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             analytics and advertising measurement.
           </li>
           <li>
-            Our payment provider, Yoco, only when you choose to pay by card — we never see or store
+            Our payment provider, Yoco, only when you choose to pay by card. We never see or store
             your card details.
           </li>
           <li>We do not sell or rent your personal information to any third party.</li>

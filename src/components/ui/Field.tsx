@@ -35,10 +35,3 @@ export function Field({ label, htmlFor, error, hint, required, children, classNa
     </div>
   )
 }
-
-export function describedBy(id: string, hasError: boolean, hasHint: boolean): string | undefined {
-  const parts: string[] = []
-  if (hasHint) parts.push(`${id}-hint`)
-  if (hasError) parts.push(`${id}-error`)
-  return parts.length ? parts.join(' ') : undefined
-}

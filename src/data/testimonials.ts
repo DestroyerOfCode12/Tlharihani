@@ -1,12 +1,14 @@
 import { testimonialSchema, type Testimonial } from '../schemas/catalog'
 
+// Placeholder quotes, standing in until real customer testimonials come through.
+// Swap names, locations and quotes for real ones before launch.
 const rawTestimonials: Testimonial[] = [
   {
     id: 'testimonial-1',
     name: 'Naledi M.',
     location: 'Sandton',
     quote:
-      'They brought three phones to my office so I could compare them in person before buying. No pressure, no upselling — just honest advice. That is rare.',
+      'They brought three phones to my office so I could compare them in person before buying. No pressure, no upselling, just honest advice. That is rare.',
     service: 'shop',
     rating: 5,
   },

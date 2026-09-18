@@ -64,7 +64,7 @@ export default function EnquiryConfirmation() {
         </span>
         <h1 className="font-display mt-6 text-4xl">Enquiry sent</h1>
         <p className="text-grey-300 mt-4 max-w-md text-sm">
-          Thank you — we&apos;ve received your enquiry and will confirm stock, price and next steps
+          Thanks, we&apos;ve received your enquiry and will confirm stock, price and next steps
           shortly. Your reference number is:
         </p>
         <p className="label-caps border-hairline-strong text-accent mt-4 rounded-full border px-5 py-2">

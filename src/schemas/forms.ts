@@ -29,7 +29,7 @@ export const contactFormSchema = z.object({
   email,
   phone,
   subject: z.string().trim().min(1, 'Please select a topic.'),
-  message: z.string().trim().min(10, 'Tell us a little more — at least 10 characters.').max(2000),
+  message: z.string().trim().min(10, 'Tell us a little more, at least 10 characters.').max(2000),
   consent,
   website: honeypot,
 })

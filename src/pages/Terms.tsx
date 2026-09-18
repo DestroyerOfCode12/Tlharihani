@@ -40,7 +40,7 @@ export default function Terms() {
           </li>
           <li>
             A copy of your ID and proof of residence will be requested securely once your booking is
-            confirmed — never through the website form.
+            confirmed, never through the website form.
           </li>
           <li>
             You must tick the Terms and Conditions checkbox before any booking request is submitted.
@@ -52,7 +52,7 @@ export default function Terms() {
 
         <h2>4. Phone sales</h2>
         <p>
-          [TO BE SUPPLIED: warranty terms, lay buy terms, and returns eligibility — see also our{' '}
+          [TO BE SUPPLIED: warranty terms, lay buy terms, and returns eligibility. See also our{' '}
           <a href="/returns-warranty" className="underline underline-offset-2">
             Returns, Refunds & Warranty Policy
           </a>

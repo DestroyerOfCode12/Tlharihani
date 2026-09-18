@@ -51,7 +51,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact Us"
-        description="Get in touch with Gadgets & Travels — WhatsApp, email, or book an appointment at our Sandton hub. We reply within one business day."
+        description="Get in touch with Gadgets & Travels by WhatsApp, email, or book an appointment at our Sandton hub. We reply within one business day."
         path="/contact"
       />
 
@@ -59,8 +59,8 @@ export default function Contact() {
         <p className="label-caps text-accent">Contact</p>
         <h1 className="font-display mt-3 text-4xl sm:text-5xl">Let&apos;s talk</h1>
         <p className="text-grey-300 mt-4 max-w-xl text-sm">
-          Whether it&apos;s a question about a phone, a rental booking, or you&apos;d like to book
-          an appointment at our hub — reach out and we&apos;ll reply within one business day.
+          Question about a phone, a rental booking, or want to book an appointment at our hub? Reach
+          out. We reply within one business day.
         </p>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_420px]">
@@ -136,8 +136,7 @@ export default function Contact() {
 
             {status === 'success' ? (
               <p role="status" className="text-accent text-sm">
-                Message sent — thank you! Your reference is {reference}. We&apos;ll be in touch
-                soon.
+                Message sent, thank you. Your reference is {reference}. We&apos;ll be in touch soon.
               </p>
             ) : null}
             {status === 'error' ? (

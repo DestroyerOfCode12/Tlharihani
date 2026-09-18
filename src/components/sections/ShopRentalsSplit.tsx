@@ -48,8 +48,8 @@ export function ShopRentalsSplit() {
             <p className="label-caps text-accent">Borrow it</p>
             <h3 className="font-display text-3xl sm:text-4xl">Rent devices & cars</h3>
             <p className="text-grey-200 max-w-sm text-sm">
-              Daily, weekly, monthly or long term — delivered and collected wherever you need them,
-              with clear pricing and deposits.
+              Daily, weekly, monthly or long term. Delivered and collected wherever you need them,
+              with clear pricing and deposits shown upfront.
             </p>
             <ButtonLink to="/rentals" variant="primary" size="md" className="mt-2 w-fit">
               Browse rentals

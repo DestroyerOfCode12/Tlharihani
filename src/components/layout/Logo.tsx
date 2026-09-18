@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { motion as motionTokens } from '../../lib/tokens'
 
 interface LogoProps {
   variant?: 'white' | 'black'
@@ -22,18 +23,14 @@ export function Logo({
 
   if (!withRingAnimation || prefersReducedMotion) {
     return (
-      <Link to="/" aria-label="Gadgets & Travels — home" className="inline-flex items-center">
+      <Link to="/" aria-label="Gadgets & Travels, home" className="inline-flex items-center">
         <img src={src} alt="Gadgets & Travels" className={className} width={160} height={120} />
       </Link>
     )
   }
 
   return (
-    <Link
-      to="/"
-      aria-label="Gadgets & Travels — home"
-      className="relative inline-flex items-center"
-    >
+    <Link to="/" aria-label="Gadgets & Travels, home" className="relative inline-flex items-center">
       <img src={src} alt="Gadgets & Travels" className={className} width={160} height={120} />
       <svg
         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -50,7 +47,7 @@ export function Logo({
           strokeWidth="1"
           initial={{ pathLength: 0, opacity: 0.9 }}
           animate={{ pathLength: 1, opacity: 0 }}
-          transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.6, ease: motionTokens.ease }}
         />
       </svg>
     </Link>

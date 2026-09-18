@@ -15,7 +15,11 @@ const variants: Variants = {
   visible: { opacity: 1, y: 0 },
 }
 
-/** Fade-and-rise on scroll into view. No-ops entirely under prefers-reduced-motion. */
+// Fade-and-rise on scroll into view. No-ops under prefers-reduced-motion.
+// Heads up if you're screenshotting with Playwright: a single fullPage capture
+// resizes the viewport before whileInView ever fires, so these sections come back
+// blank. Scroll incrementally first (see the smoke test script) or you'll think
+// this is broken when it isn't.
 export function Reveal({ children, className, delay = 0, as = 'div' }: RevealProps) {
   const prefersReducedMotion = usePrefersReducedMotion()
   const MotionTag = as === 'li' ? motion.li : motion.div

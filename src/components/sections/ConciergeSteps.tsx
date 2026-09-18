@@ -6,19 +6,19 @@ const steps = [
     number: '01',
     title: 'Tell us what you need',
     description:
-      "Browse the site or message us on WhatsApp. Buying, renting, or just not sure yet — we'll point you the right way.",
+      "Browse the site, or just message us on WhatsApp. Not sure yet? We'll help you work it out.",
   },
   {
     number: '02',
     title: 'We bring it to you',
     description:
-      'Your phone, device or car is inspected, charged and delivered to your address — home, office, or hotel — at a time that suits you.',
+      'Home, office, hotel, wherever suits you. Your phone, device or car arrives inspected, charged and ready to go at the time you asked for.',
   },
   {
     number: '03',
     title: 'Enjoy it, worry-free',
     description:
-      'Clear pricing, a documented condition, and a real person on WhatsApp if anything comes up. Collection is just as easy.',
+      'Clear pricing. A documented condition. A real person on WhatsApp if anything comes up.',
   },
 ]
 
@@ -31,9 +31,13 @@ export function ConciergeSteps() {
           Three steps between you and what you need
         </h2>
       </div>
-      <div className="grid gap-10 sm:grid-cols-3 sm:gap-8">
+      <div className="grid gap-10 sm:grid-cols-[1.1fr_1.3fr_1fr] sm:gap-8">
         {steps.map((step, index) => (
-          <Reveal key={step.number} delay={index * 0.1} className="flex flex-col gap-4">
+          <Reveal
+            key={step.number}
+            delay={index * 0.1}
+            className={index === 1 ? 'flex flex-col gap-4 sm:mt-6' : 'flex flex-col gap-4'}
+          >
             <span className="font-script text-accent text-5xl">{step.number}</span>
             <h3 className="font-display text-2xl">{step.title}</h3>
             <p className="text-grey-300 text-sm">{step.description}</p>

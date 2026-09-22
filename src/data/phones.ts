@@ -114,7 +114,7 @@ const rawPhones: Phone[] = [
     model: 'iPhone SE (2022)',
     category: 'phone',
     condition: 'used',
-    storageOptions: ['64GB', '128GB'],
+    storageOptions: ['128GB'],
     colorOptions: ['Midnight', 'Starlight', 'Red'],
     price: 6999,
     batteryHealth: 95,

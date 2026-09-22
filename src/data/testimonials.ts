@@ -35,7 +35,7 @@ const rawTestimonials: Testimonial[] = [
     name: 'Thabo S.',
     location: 'Cape Town (via delivery)',
     quote:
-      'Bought a refurbished iPhone for my son and was nervous about condition. It arrived exactly as described, with the battery health documented. Been a customer since.',
+      'Bought a used iPhone for my son and was nervous about condition. It arrived exactly as described, with the battery health documented. Been a customer since.',
     service: 'shop',
     rating: 5,
   },

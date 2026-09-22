@@ -18,7 +18,6 @@ type ShopTab = 'phones' | 'accessories'
 const conditionOptions: { value: Condition; label: string }[] = [
   { value: 'new', label: 'New' },
   { value: 'used', label: 'Used' },
-  { value: 'refurbished', label: 'Refurbished' },
 ]
 
 const priceBins = [
@@ -96,7 +95,7 @@ export default function Shop() {
     <>
       <Seo
         title="Shop Phones & Accessories"
-        description="New, used and refurbished phones, plus accessories, with clear pricing, condition and warranty details. Enquire to buy, no card checkout required."
+        description="New and used phones, plus accessories, with clear pricing, condition and warranty details. Enquire to buy, no card checkout required."
         path="/shop"
       />
 

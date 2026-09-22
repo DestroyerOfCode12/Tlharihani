@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const conditionSchema = z.enum(['new', 'used', 'refurbished'])
+export const conditionSchema = z.enum(['new', 'used'])
 export type Condition = z.infer<typeof conditionSchema>
 
 export const stockStatusSchema = z.enum(['in-stock', 'low-stock', 'sold-out', 'pre-order'])

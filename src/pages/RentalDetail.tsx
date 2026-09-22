@@ -176,8 +176,8 @@ export default function RentalDetail() {
             </dl>
 
             <p className="text-grey-400 text-xs">
-              We&apos;ll request a copy of your ID and proof of residence securely after your
-              booking is confirmed. Never through this form.
+              We&apos;ll request a copy of your ID, 3 months bank statement and proof of residence
+              securely after your booking is confirmed. Never through this form.
             </p>
           </div>
 

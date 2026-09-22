@@ -31,10 +31,9 @@ export default function About() {
                 not the other way around. {siteConfig.descriptionShort}
               </p>
               <p>
-                We sell new, used and refurbished phones and accessories, and we rent out devices
-                and cars on daily, weekly, monthly and long term terms. Condition is graded
-                honestly, pricing is shown upfront, and there is a real person on WhatsApp if you
-                need one.
+                We sell new and used phones and accessories, and we rent out devices and cars on
+                daily, weekly and monthly terms. Condition is graded honestly, pricing is shown
+                upfront, and there is a real person on WhatsApp if you need one.
               </p>
             </div>
           </Reveal>

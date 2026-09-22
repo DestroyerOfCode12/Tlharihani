@@ -6,7 +6,6 @@ import { formatCurrency } from '../../lib/format'
 const conditionLabel: Record<Phone['condition'], string> = {
   new: 'New',
   used: 'Used',
-  refurbished: 'Refurbished',
 }
 
 export function PhoneCard({ phone }: { phone: Phone }) {

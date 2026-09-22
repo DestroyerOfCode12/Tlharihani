@@ -38,11 +38,11 @@ export function Hero() {
         >
           <p className="label-caps text-accent">Concierge on the go</p>
           <h1 className="font-display text-4xl leading-[1.08] text-balance sm:text-6xl">
-            We bring the phone, the device, or the car to you.
+            We bring the phone, electronics or the car to you.
           </h1>
           <p className="text-grey-200 mx-auto max-w-xl text-base text-balance sm:text-lg">
-            Gadgets & Travels has sold phones and rented out devices and cars across South Africa
-            since 2010. We deliver to your door, wherever you are, and a concierge handles the
+            Gadgets & Travels has sold phones, rented out devices and cars across South Africa
+            since 2010. We deliver to your door, wherever you are and a concierge handles the
             details.
           </p>
         </motion.div>

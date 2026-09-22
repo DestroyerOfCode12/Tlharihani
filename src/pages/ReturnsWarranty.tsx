@@ -23,10 +23,6 @@ export default function ReturnsWarranty() {
             <strong>New phones:</strong> [TO BE SUPPLIED: manufacturer or in-house warranty period.]
           </li>
           <li>
-            <strong>Refurbished phones:</strong> minimum 6 months, covering hardware faults present
-            at time of sale. [CONFIRM with client]
-          </li>
-          <li>
             <strong>Used phones:</strong> sold with battery health disclosed upfront. [TO BE
             SUPPLIED: any warranty coverage.]
           </li>

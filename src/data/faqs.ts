@@ -52,9 +52,9 @@ const rawFaqs: Faq[] = [
   {
     id: 'faq-warranty',
     category: 'warranty',
-    question: 'What warranty comes with a used or refurbished phone?',
+    question: 'What warranty comes with a used phone?',
     answer:
-      '[CONFIRM] Refurbished phones include a minimum 6-month warranty covering hardware faults, and used phones are sold with battery health disclosed upfront. Full warranty terms for your specific device are listed on its product page.',
+      '[CONFIRM] Used phones are sold with battery health disclosed upfront. Full warranty terms for your specific device are listed on its product page.',
     needsConfirmation: true,
   },
   {

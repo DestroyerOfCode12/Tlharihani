@@ -15,7 +15,6 @@ import { productJsonLd } from '../lib/structured-data'
 const conditionLabel: Record<string, string> = {
   new: 'New',
   used: 'Used',
-  refurbished: 'Refurbished',
 }
 const stockLabel: Record<string, { text: string; tone: 'accent' | 'warning' | 'danger' }> = {
   'in-stock': { text: 'In stock', tone: 'accent' },

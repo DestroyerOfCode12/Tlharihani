@@ -22,8 +22,7 @@ export function ShopRentalsSplit() {
             <p className="label-caps text-accent">Own it</p>
             <h3 className="font-display text-3xl sm:text-4xl">Shop phones & accessories</h3>
             <p className="text-grey-200 max-w-sm text-sm">
-              New, used and refurbished handsets, honestly graded, with battery health and warranty
-              terms shown upfront.
+              New and used devices, honestly graded, with battery health and warranty terms.
             </p>
             <ButtonLink to="/shop" variant="primary" size="md" className="mt-2 w-fit">
               Browse the shop
@@ -48,8 +47,8 @@ export function ShopRentalsSplit() {
             <p className="label-caps text-accent">Borrow it</p>
             <h3 className="font-display text-3xl sm:text-4xl">Rent devices & cars</h3>
             <p className="text-grey-200 max-w-sm text-sm">
-              Daily, weekly, monthly or long term. Delivered and collected wherever you need them,
-              with clear pricing and deposits shown upfront.
+              Daily, weekly and monthly. Delivered and collected wherever you need them, with clear
+              pricing and deposits shown upfront.
             </p>
             <ButtonLink to="/rentals" variant="primary" size="md" className="mt-2 w-fit">
               Browse rentals

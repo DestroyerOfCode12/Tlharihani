@@ -74,8 +74,8 @@ export default function BookingConfirmation() {
           {booking.reference}
         </p>
         <p className="text-grey-400 mt-6 max-w-md text-xs">
-          We&apos;ll request a copy of your ID and proof of residence securely by email or WhatsApp
-          once your booking is confirmed.
+          We&apos;ll request a copy of your ID, 3 months bank statement and proof of residence
+          securely by email or WhatsApp once your booking is confirmed.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

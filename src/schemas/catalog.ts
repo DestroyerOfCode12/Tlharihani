@@ -29,7 +29,6 @@ export const phoneSchema = z.object({
   isFeatured: z.boolean().default(false),
   images: z.array(z.string().min(1)).min(1),
   imagesByColor: z.record(z.string(), z.array(z.string().min(1)).min(1)).optional(),
-  videoByColor: z.record(z.string(), z.string().min(1)).optional(),
   description: z.string().min(1),
   specs: z.record(z.string(), z.string()),
 })

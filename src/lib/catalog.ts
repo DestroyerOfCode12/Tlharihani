@@ -24,6 +24,25 @@ export function uniqueBrands(items: (Phone | Accessory)[]): string[] {
   return Array.from(new Set(items.map((item) => item.brand))).sort()
 }
 
+export function getPhonePrice(phone: Phone, storage: string, color: string): number {
+  const basePrice = phone.priceMatrix?.[storage] ?? phone.price
+  const surcharge = phone.colorSurcharge?.[color] ?? 0
+  return basePrice + surcharge
+}
+
+export function getPhoneStartingPrice(phone: Phone): number {
+  if (!phone.priceMatrix) return phone.price
+  return Math.min(...Object.values(phone.priceMatrix))
+}
+
+export function getPhoneImages(phone: Phone, color: string): string[] {
+  return phone.imagesByColor?.[color] ?? phone.images
+}
+
+export function getPhoneVideo(phone: Phone, color: string): string | undefined {
+  return phone.videoByColor?.[color]
+}
+
 export function sortItems<T extends { price: number; isFeatured: boolean }>(
   items: T[],
   sort: SortOption,

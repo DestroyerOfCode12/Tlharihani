@@ -1,5 +1,6 @@
 import { siteConfig } from '../data/site-config'
 import type { Faq, Phone } from '../schemas/catalog'
+import { getPhoneStartingPrice } from './catalog'
 
 export function localBusinessJsonLd(origin: string) {
   return {
@@ -38,7 +39,7 @@ export function productJsonLd(phone: Phone, origin: string) {
     offers: {
       '@type': 'Offer',
       priceCurrency: 'ZAR',
-      price: phone.price,
+      price: getPhoneStartingPrice(phone),
       availability:
         phone.stockStatus === 'sold-out'
           ? 'https://schema.org/OutOfStock'

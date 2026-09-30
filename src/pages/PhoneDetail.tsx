@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { Section } from '../components/ui/Section'
@@ -7,7 +7,7 @@ import { Button } from '../components/ui/Button'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Select } from '../components/ui/Select'
 import { TiltImage } from '../components/ui/TiltImage'
-import { findPhoneBySlug } from '../lib/catalog'
+import { findPhoneBySlug, getPhoneImages, getPhonePrice, getPhoneVideo } from '../lib/catalog'
 import { formatCurrency } from '../lib/format'
 import { useEnquiryCart } from '../context/EnquiryCartContext'
 import { trackEvent } from '../lib/analytics'
@@ -38,6 +38,20 @@ export default function PhoneDetail() {
     if (phone) trackEvent('product_viewed', { slug: phone.slug, type: 'phone' })
   }, [phone])
 
+  useEffect(() => {
+    setActiveImage(0)
+  }, [color])
+
+  const currentPrice = useMemo(
+    () => (phone ? getPhonePrice(phone, storage, color) : 0),
+    [phone, storage, color],
+  )
+  const currentImages = useMemo(() => (phone ? getPhoneImages(phone, color) : []), [phone, color])
+  const currentVideo = useMemo(
+    () => (phone ? getPhoneVideo(phone, color) : undefined),
+    [phone, color],
+  )
+
   if (!phone) return <Navigate to="/shop" replace />
 
   const stock = stockLabel[phone.stockStatus]
@@ -49,7 +63,7 @@ export default function PhoneDetail() {
       name: `${phone.brand} ${phone.model}`,
       slug: phone.slug,
       type: 'phone',
-      price: phone.price,
+      price: currentPrice,
       quantity: 1,
       storage,
       color,
@@ -73,17 +87,30 @@ export default function PhoneDetail() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
             <div className="border-hairline bg-ink-soft aspect-[3/4] overflow-hidden rounded-lg border">
-              <TiltImage
-                src={phone.images[activeImage]}
-                alt={`${phone.brand} ${phone.model}`}
-                width={900}
-                height={1200}
-                className="h-full w-full"
-              />
+              {currentVideo ? (
+                <video
+                  key={currentVideo}
+                  src={currentVideo}
+                  poster="/images/phones/iphone-18-pro-burgundy-hero-poster.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <TiltImage
+                  src={currentImages[activeImage]}
+                  alt={`${phone.brand} ${phone.model} in ${color}`}
+                  width={900}
+                  height={1200}
+                  className="h-full w-full"
+                />
+              )}
             </div>
-            {phone.images.length > 1 ? (
+            {!currentVideo && currentImages.length > 1 ? (
               <div className="flex gap-3">
-                {phone.images.map((image, index) => (
+                {currentImages.map((image, index) => (
                   <button
                     key={image}
                     type="button"
@@ -105,6 +132,11 @@ export default function PhoneDetail() {
                 ))}
               </div>
             ) : null}
+            {currentVideo ? (
+              <p className="text-grey-400 text-xs">
+                Official Apple reveal footage, Burgundy finish.
+              </p>
+            ) : null}
           </div>
 
           <div className="flex flex-col gap-6">
@@ -120,7 +152,7 @@ export default function PhoneDetail() {
             </div>
 
             <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-semibold">{formatCurrency(phone.price)}</span>
+              <span className="text-3xl font-semibold">{formatCurrency(currentPrice)}</span>
               {phone.compareAtPrice ? (
                 <span className="text-grey-400 text-lg line-through">
                   {formatCurrency(phone.compareAtPrice)}

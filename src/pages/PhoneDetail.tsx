@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/Badge'
 import { Button } from '../components/ui/Button'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Select } from '../components/ui/Select'
+import { TiltImage } from '../components/ui/TiltImage'
 import { findPhoneBySlug } from '../lib/catalog'
 import { formatCurrency } from '../lib/format'
 import { useEnquiryCart } from '../context/EnquiryCartContext'
@@ -72,12 +73,12 @@ export default function PhoneDetail() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
             <div className="border-hairline bg-ink-soft aspect-[3/4] overflow-hidden rounded-lg border">
-              <img
+              <TiltImage
                 src={phone.images[activeImage]}
                 alt={`${phone.brand} ${phone.model}`}
                 width={900}
                 height={1200}
-                className="h-full w-full object-cover"
+                className="h-full w-full"
               />
             </div>
             {phone.images.length > 1 ? (

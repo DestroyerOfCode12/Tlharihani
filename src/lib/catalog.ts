@@ -39,10 +39,6 @@ export function getPhoneImages(phone: Phone, color: string): string[] {
   return phone.imagesByColor?.[color] ?? phone.images
 }
 
-export function getPhoneVideo(phone: Phone, color: string): string | undefined {
-  return phone.videoByColor?.[color]
-}
-
 export function sortItems<T extends { price: number; isFeatured: boolean }>(
   items: T[],
   sort: SortOption,

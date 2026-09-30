@@ -6,8 +6,8 @@ import { Badge } from '../components/ui/Badge'
 import { Button } from '../components/ui/Button'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Select } from '../components/ui/Select'
-import { TiltImage } from '../components/ui/TiltImage'
-import { findPhoneBySlug, getPhoneImages, getPhonePrice, getPhoneVideo } from '../lib/catalog'
+import { FrameCycleImage } from '../components/ui/FrameCycleImage'
+import { findPhoneBySlug, getPhoneImages, getPhonePrice } from '../lib/catalog'
 import { formatCurrency } from '../lib/format'
 import { useEnquiryCart } from '../context/EnquiryCartContext'
 import { trackEvent } from '../lib/analytics'
@@ -47,10 +47,6 @@ export default function PhoneDetail() {
     [phone, storage, color],
   )
   const currentImages = useMemo(() => (phone ? getPhoneImages(phone, color) : []), [phone, color])
-  const currentVideo = useMemo(
-    () => (phone ? getPhoneVideo(phone, color) : undefined),
-    [phone, color],
-  )
 
   if (!phone) return <Navigate to="/shop" replace />
 
@@ -87,28 +83,16 @@ export default function PhoneDetail() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
             <div className="border-hairline bg-ink-soft aspect-[3/4] overflow-hidden rounded-lg border">
-              {currentVideo ? (
-                <video
-                  key={currentVideo}
-                  src={currentVideo}
-                  poster="/images/phones/iphone-18-pro-burgundy-hero-poster.jpg"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <TiltImage
-                  src={currentImages[activeImage]}
-                  alt={`${phone.brand} ${phone.model} in ${color}`}
-                  width={900}
-                  height={1200}
-                  className="h-full w-full"
-                />
-              )}
+              <FrameCycleImage
+                images={currentImages}
+                activeIndex={activeImage}
+                alt={`${phone.brand} ${phone.model} in ${color}`}
+                width={900}
+                height={1200}
+                className="h-full w-full"
+              />
             </div>
-            {!currentVideo && currentImages.length > 1 ? (
+            {currentImages.length > 1 ? (
               <div className="flex gap-3">
                 {currentImages.map((image, index) => (
                   <button
@@ -132,10 +116,8 @@ export default function PhoneDetail() {
                 ))}
               </div>
             ) : null}
-            {currentVideo ? (
-              <p className="text-grey-400 text-xs">
-                Official Apple reveal footage, Burgundy finish.
-              </p>
+            {currentImages.length > 1 ? (
+              <p className="text-grey-400 text-xs">Hover the photo to see it from every angle.</p>
             ) : null}
           </div>
 

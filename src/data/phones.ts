@@ -131,15 +131,27 @@ const rawPhones: Phone[] = [
     stockStatus: 'in-stock',
     isSpecial: false,
     isFeatured: true,
-    images: ['/images/phones/iphone-18-pro-black-1.jpg'],
+    images: [
+      '/images/phones/iphone-18-pro-black-1.jpg',
+      '/images/phones/iphone-18-pro-black-2.jpg',
+    ],
     imagesByColor: {
-      Black: ['/images/phones/iphone-18-pro-black-1.jpg'],
-      Silver: ['/images/phones/iphone-18-pro-black-1.jpg'],
-      Glacier: ['/images/phones/iphone-18-pro-black-1.jpg'],
-      Burgundy: ['/images/phones/iphone-18-pro-burgundy-1.jpg'],
-    },
-    videoByColor: {
-      Burgundy: '/videos/iphone-18-pro-burgundy-hero.mp4',
+      Black: [
+        '/images/phones/iphone-18-pro-black-1.jpg',
+        '/images/phones/iphone-18-pro-black-2.jpg',
+      ],
+      Silver: [
+        '/images/phones/iphone-18-pro-black-1.jpg',
+        '/images/phones/iphone-18-pro-silver-2.jpg',
+      ],
+      Glacier: [
+        '/images/phones/iphone-18-pro-black-1.jpg',
+        '/images/phones/iphone-18-pro-glacier-2.jpg',
+      ],
+      Burgundy: [
+        '/images/phones/iphone-18-pro-burgundy-1.jpg',
+        '/images/phones/iphone-18-pro-burgundy-2.jpg',
+      ],
     },
     description:
       '6.3-inch ProMotion display, 48MP Fusion Main camera with variable aperture, and the A20 Pro chip. Brand new, sealed. Pick your storage and colour above, Burgundy is a limited finish at a premium.',
@@ -175,15 +187,27 @@ const rawPhones: Phone[] = [
     stockStatus: 'in-stock',
     isSpecial: false,
     isFeatured: true,
-    images: ['/images/phones/iphone-18-pro-max-black-1.jpg'],
+    images: [
+      '/images/phones/iphone-18-pro-max-black-1.jpg',
+      '/images/phones/iphone-18-pro-max-black-2.jpg',
+    ],
     imagesByColor: {
-      Black: ['/images/phones/iphone-18-pro-max-black-1.jpg'],
-      Silver: ['/images/phones/iphone-18-pro-max-black-1.jpg'],
-      Glacier: ['/images/phones/iphone-18-pro-max-black-1.jpg'],
-      Burgundy: ['/images/phones/iphone-18-pro-max-burgundy-1.jpg'],
-    },
-    videoByColor: {
-      Burgundy: '/videos/iphone-18-pro-burgundy-hero.mp4',
+      Black: [
+        '/images/phones/iphone-18-pro-max-black-1.jpg',
+        '/images/phones/iphone-18-pro-max-black-2.jpg',
+      ],
+      Silver: [
+        '/images/phones/iphone-18-pro-max-black-1.jpg',
+        '/images/phones/iphone-18-pro-max-silver-2.jpg',
+      ],
+      Glacier: [
+        '/images/phones/iphone-18-pro-max-black-1.jpg',
+        '/images/phones/iphone-18-pro-max-glacier-2.jpg',
+      ],
+      Burgundy: [
+        '/images/phones/iphone-18-pro-max-burgundy-1.jpg',
+        '/images/phones/iphone-18-pro-max-burgundy-2.jpg',
+      ],
     },
     description:
       '6.9-inch ProMotion display, 48MP Fusion Main camera with variable aperture, and a big leap in battery life on the A20 Pro chip. Brand new, sealed. Pick your storage and colour above, Burgundy is a limited finish at a premium.',

@@ -19,6 +19,8 @@ export const phoneSchema = z.object({
   colorOptions: z.array(z.string().min(1)).min(1),
   price: moneySchema,
   compareAtPrice: moneySchema.optional(),
+  priceMatrix: z.record(z.string(), moneySchema).optional(),
+  colorSurcharge: z.record(z.string(), z.number().int()).optional(),
   batteryHealth: z.number().min(0).max(100).optional(),
   warrantyMonths: z.number().int().min(0),
   layBuyAvailable: z.boolean(),
@@ -26,6 +28,8 @@ export const phoneSchema = z.object({
   isSpecial: z.boolean().default(false),
   isFeatured: z.boolean().default(false),
   images: z.array(z.string().min(1)).min(1),
+  imagesByColor: z.record(z.string(), z.array(z.string().min(1)).min(1)).optional(),
+  videoByColor: z.record(z.string(), z.string().min(1)).optional(),
   description: z.string().min(1),
   specs: z.record(z.string(), z.string()),
 })

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import type { Phone } from '../../schemas/catalog'
 import { Badge } from '../ui/Badge'
 import { formatCurrency } from '../../lib/format'
+import { getPhoneStartingPrice } from '../../lib/catalog'
 
 const conditionLabel: Record<Phone['condition'], string> = {
   new: 'New',
@@ -9,6 +10,9 @@ const conditionLabel: Record<Phone['condition'], string> = {
 }
 
 export function PhoneCard({ phone }: { phone: Phone }) {
+  const startingPrice = getPhoneStartingPrice(phone)
+  const hasVariablePrice = Boolean(phone.priceMatrix)
+
   return (
     <Link
       to={`/shop/phones/${phone.slug}`}
@@ -43,7 +47,13 @@ export function PhoneCard({ phone }: { phone: Phone }) {
         <p className="label-caps text-grey-400">{phone.brand}</p>
         <h3 className="font-display text-paper text-xl">{phone.model}</h3>
         <div className="flex items-baseline gap-2 pt-1">
-          <span className="text-paper text-lg font-semibold">{formatCurrency(phone.price)}</span>
+          {hasVariablePrice ? (
+            <span className="text-paper text-lg font-semibold">
+              From {formatCurrency(startingPrice)}
+            </span>
+          ) : (
+            <span className="text-paper text-lg font-semibold">{formatCurrency(phone.price)}</span>
+          )}
           {phone.compareAtPrice ? (
             <span className="text-grey-400 text-sm line-through">
               {formatCurrency(phone.compareAtPrice)}
